@@ -25,7 +25,7 @@ class Sockets {
             })
         
             socket.on('guardar', (datos) => {
-                fetch('https://raosari.dyndns.info/gruporaosari/servicios/usuarios.php?funcion=usuarios')
+                fetch('http://raosari.dyndns.info/gruporaosari/servicios/usuarios.php?funcion=usuarios')
                 .then(response =>response.json())
                 .then(respuesta => {
         
