@@ -18,7 +18,7 @@ class Server  {
 
         //configuracion del socket server
         this.io = socketio(this.server, { transports: ['websocket', 'polling', 'flashsocket'] });
-
+       // this.io.cors()
     }
 
     middlewares() {
