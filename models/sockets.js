@@ -23,22 +23,22 @@ class Sockets {
                 console.log('mensaje recibido del cliente', mensaje);
                 this.io.emit('mensaje-from-server', mensaje);
             })
-        
-            socket.on('guardar', (datos) => {
-                fetch('http://raosari.dyndns.info/gruporaosari/servicios/usuarios.php?funcion=usuarios')
-                .then(response =>response.json())
-                .then(respuesta => {
-        
-                })
-                .catch(error => {
-                    console.error(error);
-                })
+
+            socket.on('pong', ()=> {
+                console.log('pong recibido');
             })
+            let emitirNuevoReporte = () => {
+                this.io.emit('nuevo-reporte');
+            }
+ 
            
         
         });
         
     }
+
+   
+
 }
 
 module.exports = Sockets;
